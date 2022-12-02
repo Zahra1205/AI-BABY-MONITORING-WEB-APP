@@ -9,6 +9,9 @@ song = loadSound("song.wav");
 function setup(){
 canvas = createCanvas(640, 420);
 canvas.center();
+video = createCapture(VIDEO);
+video.size(640, 420);
+video.hide();
 objectDetector= ml5.objectDetector("cocossd", modelLoaded);
 document.getElementById("status").innerHTML="Status : Detecting Objects";
 }
